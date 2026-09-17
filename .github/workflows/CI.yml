@@ -45,7 +45,6 @@ jobs:
         run: echo "Commit message matched the condition."
 
   linux:
-    needs: [check-commit]
     runs-on: ${{ matrix.platform.runner }}
     strategy:
       matrix:
@@ -90,7 +89,6 @@ jobs:
           path: dist
 
   musllinux:
-    needs: [check-commit]
     runs-on: ${{ matrix.platform.runner }}
     strategy:
       matrix:
